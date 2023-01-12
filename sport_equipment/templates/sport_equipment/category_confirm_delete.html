@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+Список категорий
+{% endblock %}
+
+{% block content %}
+Вы уверены, что хотите удалить?
+  {{object.name}}
+  {{object.pk}}
+
+  <form method="post">
+    {% csrf_token %}
+    <button class="btn btn-danger" type="submit">Да</button>
+  </form>
+{% endblock %}

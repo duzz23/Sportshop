@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+Equipments
+{% endblock %}
+
+{% block content %}
+    <div class="container"><h1>Equipments</h1>
+    <h2>All Equipments</h2>
+         {% if equipment_list %}
+        <ul>
+    {% for item in equipment_list %}
+        <li>
+            {{item.name}}/{{item.category.name}}
+        </li>
+    {% endfor %}
+    </ul>
+        {% endif %}
+        <p>Всего товаров: {{equipment_list|length}}</p>
+
+    <h2>Shop Equipments</h2>
+    <ul>
+    {% for item in equipment_list_own %}
+        <li>
+            {{item.name|upper}}/{{item.category.name}}
+        </li>
+    {% endfor %}
+    </ul>
+         Если вам понравился товар звоните по номеру +7911
+    </div>
+{% endblock %}

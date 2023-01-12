@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+Список категорий
+{% endblock %}
+
+{% block content %}
+  <h1>Список категорий</h1>
+<ul>
+  {% for category in categories %}
+      <li>
+        <a class="btn btn-info" href="{% url 'sport_equipment:category-detail' pk=category.pk %}">
+            {% if category.img %}
+                <img width="100px" src="{{category.img.url}}" alt="{{category.name}}">
+            {% endif %}
+            {% with category.equipment_count as equipment_count %}
+                    {{category.name}} | {{equipment_count}}
+
+                </a>
+                <span><a class="btn btn-warning" href="{% url 'sport_equipment:category-update' pk=category.pk %}">Update</a></span>
+                <span><a class="btn btn-danger" href="{% url 'sport_equipment:category-delete' pk=category.pk %}">Delete</a></span>
+
+                  ...
+                  количество: {{equipment_count}} {{category.has_equipment}}
+            {% endwith %}
+      </li>
+  {% endfor %}
+  </ul>
+    <p>
+        Итого: {{all_count}}
+    </p>
+  <p></p>
+    {{useful_information}}
+<p></p>
+    <a href="{% url 'sport_equipment:category-create' %}" class="btn btn-primary">Создать</a>
+{% endblock %}
