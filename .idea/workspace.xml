@@ -30,10 +30,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="rq-dev" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -102,7 +102,7 @@
       <workItem from="1673545422935" duration="6000" />
       <workItem from="1673545531908" duration="177000" />
       <workItem from="1673548133614" duration="874000" />
-      <workItem from="1673549359397" duration="45000" />
+      <workItem from="1673549359397" duration="383000" />
     </task>
     <task id="LOCAL-00001" summary="ADD: Celery">
       <created>1673465119827</created>
